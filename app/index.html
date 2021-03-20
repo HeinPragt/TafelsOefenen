@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>    
+<title>Tafels Oefenen 1.2</title>
+<link rel="stylesheet" href="TafelsOefenen.css">
+</head>
+<body>
+
+<form name="reken">    
+<div id="outer">
+
+<h1>Tafels tot 10 oefenen!</h1>
+
+<table class="tafelsheader">
+<tr><td>Op volgorde:&nbsp; </td><td>
+<input class="button" onclick="init(2,false)" value=" 2 " type="button"> 
+<input class="button" onclick="init(3,false)" value=" 3 " type="button"> 
+<input class="button" onclick="init(4,false)" value=" 4 " type="button"> 
+<input class="button" onclick="init(5,false)" value=" 5 " type="button"> 
+<input class="button" onclick="init(6,false)" value=" 6 " type="button"> 
+<input class="button" onclick="init(7,false)" value=" 7 " type="button"> 
+<input class="button" onclick="init(8,false)" value=" 8 " type="button"> 
+<input class="button" onclick="init(9,false)" value=" 9 " type="button"> 
+<input class="button" onclick="init(10,false)" value=" 10 " type="button"> 
+</td></tr>
+<tr><td>Door elkaar: </td><td> 
+<input class="button" onclick="init(2,true)" value=" 2 " type="button"> 
+<input class="button" onclick="init(3,true)" value=" 3 " type="button"> 
+<input class="button" onclick="init(4,true)" value=" 4 " type="button"> 
+<input class="button" onclick="init(5,true)" value=" 5 " type="button"> 
+<input class="button" onclick="init(6,true)" value=" 6 " type="button"> 
+<input class="button" onclick="init(7,true)" value=" 7 " type="button"> 
+<input class="button" onclick="init(8,true)" value=" 8 " type="button"> 
+<input class="button" onclick="init(9,true)" value=" 9 " type="button"> 
+<input class="button" onclick="init(10,true)" value=" 10 " type="button"> 
+</td>
+</tr>
+</table>
+<table class="tafels" border="1">
+<tbody> 
+<tr> 
+<td><input class="tekstvak" readonly name="vak1"></td>
+<td><input class="antwoordvak" tabindex="1" onkeypress="return entercode(1)" onchange=this.form.ant2.focus() onfocus="setfocus(0)" onclick="setfocus(0)" maxlength="5" name="ant1"></td>
+<td><input class="oplvak" readonly name="opl1"></td>
+</tr>
+<tr> 
+<td><input class="tekstvak" readonly name="vak2"></td>
+<td><input class="antwoordvak" tabindex="2" onkeypress="return entercode(2)" onchange=this.form.ant3.focus() onfocus="setfocus(1)" onclick="setfocus(1)" maxlength="5" name="ant2"></td>
+<td><input class="oplvak" readonly name="opl2"></td>
+</tr>
+<tr> 
+<td><input class="tekstvak" readonly name="vak3"></td>
+<td><input class="antwoordvak" tabindex="3" onkeypress="return entercode(3)" onchange=this.form.ant4.focus() onfocus="setfocus(2)" onclick="setfocus(2)" maxlength="5" name="ant3"></td>
+<td><input class="oplvak" readonly name="opl3"></td>
+</tr>
+<tr> 
+<td><input class="tekstvak" readonly name="vak4"></td>
+<td><input class="antwoordvak" tabindex="4" onkeypress="return entercode(4)" onchange=this.form.ant5.focus() onfocus="setfocus(3)" onclick="setfocus(3)" maxlength="5" name="ant4"></td>
+<td><input class="oplvak" readonly name="opl4"></td>
+</tr>
+<tr> 
+<td><input class="tekstvak" readonly name="vak5"></td>
+<td><input class="antwoordvak" tabindex="5" onkeypress="return entercode(5)" onchange=this.form.ant6.focus() onfocus="setfocus(4)" onclick="setfocus(4)" maxlength="5" name="ant5"></td>
+<td><input class="oplvak" readonly name="opl5"></td>
+</tr>
+<tr> 
+<td><input class="tekstvak" readonly name="vak6"></td>
+<td><input class="antwoordvak" tabindex="6" onkeypress="return entercode(6)" onchange=this.form.ant7.focus() onfocus="setfocus(5)" onclick="setfocus(5)" maxlength="5" name="ant6"></td>
+<td><input class="oplvak" readonly name="opl6"></td>
+</tr>
+<tr> 
+<td><input class="tekstvak" readonly name="vak7"></td>
+<td><input class="antwoordvak" tabindex="7" onkeypress="return entercode(7)" onchange=this.form.ant8.focus() onfocus="setfocus(6)" onclick="setfocus(6)" maxlength="5" name="ant7"></td>
+<td><input class="oplvak" readonly name="opl7"></td>
+</tr>
+<tr> 
+<td><input class="tekstvak" readonly name="vak8"></td>
+<td><input class="antwoordvak" tabindex="8" onkeypress="return entercode(8)" onchange=this.form.ant9.focus() onfocus="setfocus(7)" onclick="setfocus(7)" maxlength="5" name="ant8"></td>
+<td><input class="oplvak" readonly name="opl8"></td>
+</tr>
+<tr> 
+<td><input class="tekstvak" readonly name="vak9"></td>
+<td><input class="antwoordvak" tabindex="9" onkeypress="return entercode(9)" onchange=this.form.ant10.focus() onfocus="setfocus(8)" onclick="setfocus(8)" maxlength="5" name="ant9"></td>
+<td><input class="oplvak" readonly name="opl9"></td>
+</tr>
+<tr> 
+<td><input class="tekstvak" readonly name="vak10"></td>
+<td><input class="antwoordvak" tabindex="10" onkeypress="return entercode(0)" maxlength="5" onfocus="setfocus(9)" onclick="setfocus(9)" name="ant10"></td>
+<td><input class="oplvak" readonly name="opl10"></td>
+</tr>
+</tbody>
+</table>
+<table class="keyboard" border="1">
+<tr><td colspan="3">Toetsenbord</td></tr>
+<tr>
+<td><input class="button" onclick="inp(7)" value=" 7 " type="button"></td>
+<td><input class="button" onclick="inp(8)" value=" 8 " type="button"></td>
+<td><input class="button" onclick="inp(9)" value=" 9 " type="button"></td>
+</tr>
+<tr>
+<td><input class="button" onclick="inp(4)" value=" 4 " type="button"></td>
+<td><input class="button" onclick="inp(5)" value=" 5 " type="button"></td>
+<td><input class="button" onclick="inp(6)" value=" 6 " type="button"></td>
+</tr>
+<tr>
+<td><input class="button" onclick="inp(1)" value=" 1 " type="button"></td>
+<td><input class="button" onclick="inp(2)" value=" 2 " type="button"></td>
+<td><input class="button" onclick="inp(3)" value=" 3 " type="button"></td>
+</tr>
+<tr>
+<td><input class="button" onclick="inp(11)" value=" < " type="button"></td>
+<td><input class="button" onclick="inp(0)" value=" 0 " type="button"></td>
+<td><input class="button" onclick="inp(12)" value=" > " type="button"></td>
+</tr>
+</table>
+<br class="clear" />
+<input class="button" onclick="controle()" value="Controleer" type="button" name="butControle">  
+Score: <input class="scorevak" readonly name="score" />
+&nbsp;<input class="button" onclick="uitleg()" value=" Uitleg " type="button" />
+
+</div>
+<div id="uitleg">   
+<p>Met deze app kun je de tafels van 1 tot en met 10 oefenen. Je kunt de tafels netjes op 
+volgorde of in willekeurige volgorde oefenen. Druk op een knopje bovenaan om een tafel 
+te kiezen en of je het op volgorde (eerste rij) of door elkaar (tweede rij) wilt oefenen. 
+Wanneer je alle sommen hebt gemaakt kun je op de controleer knop drukken om te zien hoe je 
+het gedaan hebt. Wanneer je een fout gemaakt hebt staat er ook het goede antwoord in een 
+rode kleur. Na de controle moet je eerst weer een tafel aanklikken om nog een keer te oefenen, 
+bij door elkaar zal de volgorde steeds anders zijn!</p>
+<p><input class="button" onclick="eindeuitleg()" value=" Sluit venster " type="button" /></p>
+
+</div>
+</form>    
+<script src="TafelsOefenen.js"></script>
+
+</body>
+</html>
